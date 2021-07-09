@@ -13,7 +13,8 @@ $mainTextColor: #303030;
 $bannerColor: #16e0bd;
 $gradient: linear-gradient(90deg, #16e0bd 37%, #1289c0 100%);
 $reverseGradient: linear-gradient(270deg, #16e0bd 37%, #1289c0 100%);
-$javascriptColor: #dada60;
+$javascriptColor: #f7df1e;
+$javascriptLightColor: #f0db4f;
 $phpColor: #1289c0;
 $testingcolor: #8a218a;
 $strong: 900;
@@ -36,11 +37,6 @@ body{
 }
 
 //navigation
-
-header{
-    position: sticky;
-    top: 0;
-}
 
 .nav{
     padding: $sizeOneRem;
@@ -250,3 +246,101 @@ header{
     }  
 }
 
+//services
+
+h2{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.services, .skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.services__cards, .skills__cards{
+    position: relative;
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 60px 30px;
+    min-height: 550px;
+}
+
+.services__card, .skills__card{
+    max-width: 300px;
+    height: 215px;
+    position: relative;
+    background-color: #fff;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: 0.3s ease-in-out;
+  
+}
+
+.services__card:hover, .skills__card:hover{
+    height: 420px;
+}
+
+.services__Bx, .skills__Bx{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 5px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    &::before{
+        content: attr(data-text);
+        position: absolute;
+        bottom: 0;
+        left:0;
+        width: 100%;
+        text-align: center;
+        font-size: 3em;
+        color: $mainTextColor;
+        font-weight: 700;  
+    }
+    &--php{
+        background-color: $phpColor;
+     }
+     &--test{
+        background-color: $testingcolor;  
+     }
+     &--js{
+       background-color: $javascriptColor;  
+     }
+}
+
+.services__content, .skills__content {
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    ul{
+        list-style-type: none;
+        a{
+            text-decoration: none;
+            color: $bannerColor;
+        }
+    }
+}
+
+.services__card:hover .services__content,
+.skills__card:hover .skills__content{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
