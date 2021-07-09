@@ -251,11 +251,13 @@ body{
 h2{
     text-align: center;
     font-size: 3rem;
+    background: $gradient;
+    width: 100%;
+    padding: .5rem;
 }
 
 .services, .skills{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -265,7 +267,7 @@ h2{
     width: 1100px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
     padding: 60px 30px;
     min-height: 550px;
