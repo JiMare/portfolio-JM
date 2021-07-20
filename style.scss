@@ -9,14 +9,11 @@
 }
 
 $mainBackgroundColor: #fff;
-$mainTextColor: #303030;    
-$bannerColor: #16e0bd; 
-$gradient: linear-gradient(90deg, #16e0bd 37%, #1289c0 100%);
-$reverseGradient: linear-gradient(270deg, #16e0bd 37%, #1289c0 100%);
+$mainTextColor: rgb(39, 34, 34);    
+$bannerColor: #00EAD3;
 $javascriptColor: #f7df1e;
-$javascriptLightColor: #f0db4f;
 $phpColor: #1289c0; 
-$testingcolor:  #8a218a; 
+$testingcolor: #8a218a; 
 $strong: 900;
 $slim: 300;
 $sizeOneRem: 1rem;
@@ -41,7 +38,7 @@ body{
 .nav{
     padding: $sizeOneRem;
     padding-top: 0;
-    background: $gradient;
+    background: $bannerColor;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -168,7 +165,7 @@ body{
     .banner{
         position: absolute;
         left: 16%;
-        background: $reverseGradient;
+        background: $bannerColor;
         font-size: 1.5rem;
         padding: 0.25rem;
         padding-left: /*800px;*/ 510px;
@@ -251,7 +248,7 @@ body{
 h2{
     text-align: center;
     font-size: 3rem;
-    background: $gradient;
+    background: $bannerColor;
     margin: 0 16%;  
     padding: .3rem;
     text-align: center;
@@ -346,4 +343,24 @@ h2{
     opacity: 1;
     margin-top: -40px;
     transition-delay: 0.3s;
+}
+
+.about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__subtitle{
+    max-width: 60%;
+    padding: $sizeOneRem;
+    line-height: 1.6;
+    font-size: 1.5rem;
+}
+
+footer{
+    background-color: $mainTextColor;
+    color: $mainBackgroundColor;
+    text-align: center;
+    padding: $sizeOneRem;
 }
